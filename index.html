@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Catálogo de máquinas infantiles Divertir. Carros, motos, animales, helicópteros, trenes y chicleras." />
+    <meta name="theme-color" content="#2b274b" />
+    <title>Divertir | Máquinas infantiles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Divertir, inicio">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Divertir</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="header-cta" href="https://wa.me/573108856165?text=Hola%20Vicente%2C%20quiero%20información%20sobre%20las%20máquinas%20infantiles" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow">MÁQUINAS INFANTILES · COLOMBIA</p>
+          <h1>La diversión<br /><em>empieza aquí.</em></h1>
+          <p class="hero-lead">Encuentra máquinas llenas de color para parques, centros comerciales y espacios de entretenimiento.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalogo">Explorar catálogo <span>↓</span></a>
+            <a class="button button-ghost" href="assets/Catalogo_Divertir.pdf" download>Descargar catálogo PDF</a>
+          </div>
+          <div class="hero-meta">
+            <span><strong>40</strong> productos</span>
+            <span><strong>6</strong> categorías</span>
+            <span><strong>1</strong> contacto directo</span>
+          </div>
+        </div>
+        <div class="hero-gallery" aria-label="Selección de máquinas Divertir">
+          <figure class="hero-card hero-card-main"><img src="assets/products/carro verde.webp" alt="Carro verde infantil" /></figure>
+          <figure class="hero-card hero-card-top"><img src="assets/products/caballo blanco.webp" alt="Caballo blanco infantil" /></figure>
+          <figure class="hero-card hero-card-bottom"><img src="assets/products/gusano.webp" alt="Máquina infantil Gusano" /></figure>
+          <span class="spark spark-one">✦</span><span class="spark spark-two">✦</span>
+        </div>
+      </section>
+
+      <section class="category-strip" aria-label="Categorías destacadas">
+        <div class="marquee">
+          <span>Carros</span><b>✦</b><span>Motos</span><b>✦</b><span>Animales</span><b>✦</b><span>Helicópteros</span><b>✦</b><span>Trenes</span><b>✦</b><span>Chicleras</span>
+        </div>
+      </section>
+
+      <section class="intro" id="nosotros">
+        <div>
+          <p class="eyebrow">PARA ESPACIOS QUE QUIEREN DESTACARSE</p>
+          <h2>Máquinas que invitan<br />a jugar.</h2>
+        </div>
+        <div class="intro-copy">
+          <p>En Divertir reunimos una colección variada de máquinas infantiles: desde carros y motos hasta animales, naves y chicleras.</p>
+          <p>Cada modelo tiene su propia referencia para que puedas consultar directamente disponibilidad, precio y detalles con Vicente.</p>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalogo">
+        <div class="section-heading">
+          <div><p class="eyebrow">NUESTRO CATÁLOGO</p><h2>Encuentra tu favorita.</h2></div>
+          <p><span id="product-count">40</span> máquinas disponibles para explorar</p>
+        </div>
+        <div class="catalog-tools">
+          <div class="filters" role="group" aria-label="Filtrar por categoría">
+            <button class="filter active" data-category="Todos">Todos</button>
+            <button class="filter" data-category="Carros">Carros</button>
+            <button class="filter" data-category="Motos">Motos</button>
+            <button class="filter" data-category="Camiones y trenes">Camiones y trenes</button>
+            <button class="filter" data-category="Helicópteros y naves">Helicópteros y naves</button>
+            <button class="filter" data-category="Animales">Animales</button>
+            <button class="filter" data-category="Chicleras">Chicleras</button>
+          </div>
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Buscar una máquina" aria-label="Buscar una máquina" /></label>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>No encontramos máquinas con esa búsqueda.</p>
+      </section>
+
+      <section class="experience">
+        <div class="experience-image">
+          <img src="assets/products/carro safari.webp" alt="Carro Safari, máquina infantil" />
+          <div class="floating-note"><span>✦</span><p>Diseños que despiertan<br /><strong>la imaginación</strong></p></div>
+        </div>
+        <div class="experience-copy">
+          <p class="eyebrow">UNA COLECCIÓN PARA EXPLORAR</p>
+          <h2>Un mundo de opciones en un solo lugar.</h2>
+          <div class="benefit"><span>01</span><div><h3>Variedad</h3><p>Modelos para distintos gustos y espacios.</p></div></div>
+          <div class="benefit"><span>02</span><div><h3>Contacto directo</h3><p>Consulta cada referencia con una conversación de WhatsApp.</p></div></div>
+          <div class="benefit"><span>03</span><div><h3>Atención personal</h3><p>Vicente te orienta sobre precio, disponibilidad y detalles.</p></div></div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contacto">
+        <div class="contact-card">
+          <p class="eyebrow">¿YA ENCONTRASTE UNA?</p>
+          <h2>Hablemos de tu<br />próxima máquina.</h2>
+          <p>Envíanos el nombre o la referencia del producto que te gustó.</p>
+          <a class="button button-light" href="https://wa.me/573108856165?text=Hola%20Vicente%2C%20quiero%20consultar%20una%20máquina%20del%20catálogo%20Divertir" target="_blank" rel="noopener">Escribir a Vicente <span>↗</span></a>
+        </div>
+        <div class="contact-details">
+          <div><span>CONTACTO</span><strong>Vicente Cardenas</strong></div>
+          <div><span>WHATSAPP</span><a href="tel:+573108856165">310 885 6165</a></div>
+          <div><span>HORARIO</span><strong>Consulta disponibilidad</strong></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand brand-footer" href="#inicio"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Divertir</span></a>
+      <p>Máquinas infantiles · Catálogo digital</p>
+      <p>© <span id="year"></span> Divertir</p>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/573108856165?text=Hola%20Vicente%2C%20quiero%20información%20sobre%20las%20máquinas%20infantiles" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">WA</a>
+
+    <dialog class="product-modal" id="product-modal">
+      <button class="modal-close" type="button" aria-label="Cerrar">×</button>
+      <div class="modal-layout">
+        <div class="modal-image-wrap"><img id="modal-image" alt="" /></div>
+        <div class="modal-copy"><p class="eyebrow" id="modal-ref"></p><p class="modal-category" id="modal-category"></p><h2 id="modal-title"></h2><p>Consulta precio, disponibilidad y características directamente con Vicente.</p><a class="button button-primary" id="modal-whatsapp" href="#" target="_blank" rel="noopener">Consultar por WhatsApp <span>↗</span></a></div>
+      </div>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
