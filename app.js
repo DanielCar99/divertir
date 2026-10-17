@@ -47,12 +47,35 @@ function openProduct(ref) {
   modal.showModal();
 }
 
-document.querySelectorAll(".filter").forEach((button) => button.addEventListener("click", () => {
+function selectCategory(category) {
   document.querySelector(".filter.active")?.classList.remove("active");
-  button.classList.add("active");
-  activeCategory = button.dataset.category;
+
+  const matchingFilter = document.querySelector(
+    `.filter[data-category="${category}"]`
+  );
+
+  matchingFilter?.classList.add("active");
+  activeCategory = category;
+  search.value = "";
   renderProducts();
-}));
+}
+
+document.querySelectorAll(".filter").forEach((button) => {
+  button.addEventListener("click", () => {
+    selectCategory(button.dataset.category);
+  });
+});
+
+document.querySelectorAll(".marquee-filter").forEach((button) => {
+  button.addEventListener("click", () => {
+    selectCategory(button.dataset.category);
+
+    document.querySelector("#catalogo").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+});
 search.addEventListener("input", renderProducts);
 grid.addEventListener("click", (event) => {
   const card = event.target.closest(".product-card");
